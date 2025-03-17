@@ -1,4 +1,5 @@
 ﻿using Algorithms.BruteForce;
+using Algorithms.DivideAndConquer;
 
 namespace Algorithms
 {
@@ -29,11 +30,23 @@ namespace Algorithms
             #endregion
 
             #region InsertionSort
-            InsertionSort insertionSort = new InsertionSort();
-            int[] res = insertionSort.InsertionSortAlgorithm([12, 4, 3, 7, 1, 8, 9, 2, 5, 6]);
-            foreach (var item in res)
-                Console.WriteLine(item);
+            //InsertionSort insertionSort = new InsertionSort();
+            //int[] res = insertionSort.InsertionSortAlgorithm([12, 4, 3, 7, 1, 8, 9, 2, 5, 6]);
+            //foreach (var item in res)
+            //    Console.WriteLine(item);
             #endregion
+
+            #region MergeSort
+            MergeSort mergeSort = new MergeSort();
+            int[] arr = [12, 4, 3, 7, 1, 8, 9, 2, 5, 6];
+            Console.WriteLine("Original Arr: ");
+            mergeSort.Print(arr);
+            Console.WriteLine("Sorted Arr: ");
+            mergeSort.Sort(arr, 0, arr.Length-1);
+            mergeSort.Print(arr);
+             
+           
+                #endregion
         }
     }
 }
