@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Algorithms.DivideAndConquer
 {
-    class MergeSort
+    class MergeSort : ParentForAllAlgorithms
     {
         public void Sort(int[] nums,int l,int r) 
         {
@@ -22,11 +22,7 @@ namespace Algorithms.DivideAndConquer
         }
 
 
-        public void Print(int[] nums)
-        {
-            foreach (var item in nums)
-                Console.WriteLine(item);
-        }
+      
 
         private void Merge(int[] nums, int m, int l, int r)
         {
