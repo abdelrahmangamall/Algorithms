@@ -48,7 +48,8 @@ namespace Algorithms
 
             #region QuickSort
             QuickSort quickSort = new QuickSort();
-            int[] arr = [5, 4, 3, 7, 1, 8, 9, 2, 0, 6];
+            int[] arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            int[] arr = [5, 4, 3, 7, 1, 7, 7, 2, 0, 6];
             Console.WriteLine("Original Arr: ");
             quickSort.Print(arr);
 

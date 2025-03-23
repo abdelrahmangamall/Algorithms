@@ -1,4 +1,6 @@
-﻿namespace Algorithms.DivideAndConquer
+﻿using Algorithms.helpers;
+
+namespace Algorithms.DivideAndConquer
 {
     class QuickSort : ParentForAllAlgorithms
     {
@@ -8,40 +10,63 @@
             {
                 int pivot = Partition(nums, l, r);
                 QuickSortAlgorithm(nums, l, pivot - 1);
-                QuickSortAlgorithm(nums, pivot + 1, r);
+                QuickSortAlgorithm(nums, pivot, r);
             }
         }
 
        public int Partition(int[] nums, int l , int r) 
         {
-            int i =l+1, j=r, tmp;
-
-            int pivot = l;
-            while (i<=j) 
+            int i =l, j=r;
+            int mid = l + (r - l) / 2;
+            int pivot = nums[mid];
+            while (i <= j)
             {
-                if (nums[pivot] > nums[i] && pivot < i)
-                    i++;
-                else if (nums[pivot] < nums[j] && pivot < j)
-                    j--;
-                else if (nums[pivot] < nums[i] && nums[pivot] > nums[j])
+                while (nums[i] < pivot)
                 {
-                     tmp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = tmp;
-                    i++; j--;
+                    i++;
                 }
-              
+                while (nums[j] > pivot)
+                {
+                    j--;
+                }
+                if (i <= j)
+                {
+                    Swap(nums, i, j);
+                    i++;
+                    j--;
+                }
             }
-            if (i>j) 
-            {
-                tmp = nums[pivot];
-                nums[pivot] = nums[j];
-                nums[j] = tmp;
+            return i;
+            //while (i <= j)
+            //{
+            //    if (nums[pivot] >= nums[i] && pivot > i)
+            //        i++;
+            //    else if (nums[pivot] <= nums[j] && pivot < j)
+            //        j--;
+            //    else if (nums[pivot] < nums[i] && nums[pivot] >= nums[j])
+            //    {
+            //        Swap(nums, i, j);
+            //        i++; j--;
+            //    }
+            //    else if(pivot == j)
+            //    {
+            //        Swap(nums, pivot, j);
+            //    }
 
-            }
-            pivot = j;
-            return pivot;
-       
+            //}
+            //if (pivot == j)
+            //{
+            //    Swap(nums, pivot, j);
+            //}
+            //pivot = j;
+            //return pivot;
+
+        }
+        private void Swap(int[] nums, int l, int r) 
+        {
+            int tmp = nums[l];
+            nums[l] = nums[r];
+            nums[r] = tmp;
         }
     }
 }
