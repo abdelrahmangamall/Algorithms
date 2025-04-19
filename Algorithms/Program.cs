@@ -62,13 +62,46 @@ namespace Algorithms
             #endregion
 
             #region Fib With DP
-            Fibonaccu fib = new Fibonaccu();
-            int[] arr = fib.FibWithButtomUp(5);
-            fib.Print(arr);
+            //Fibonaccu fib = new Fibonaccu();
+            //int[] arr = fib.FibWithButtomUp(5);
+            //fib.Print(arr);
 
 
-            int res =fib.FibWithTopDown(5);
-            Console.WriteLine($"Fib {5} = {res}.");
+            //int res =fib.FibWithTopDown(5);
+            //Console.WriteLine($"Fib {5} = {res}.");
+            #endregion
+
+            #region Assembly Line 
+            var scheduler = new AssemblyLineScheduling();
+
+            // Fill entrance times
+            scheduler.e[0] = 2;
+            scheduler.e[1] = 4;
+
+            // Fill exit times
+            scheduler.x[0] = 3;
+            scheduler.x[1] = 2;
+
+            // Fill processing times
+            scheduler.a[0, 0] = 7;
+            scheduler.a[0, 1] = 9;
+            scheduler.a[0, 2] = 3;
+            scheduler.a[0, 3] = 4;
+
+            scheduler.a[1, 0] = 8;
+            scheduler.a[1, 1] = 5;
+            scheduler.a[1, 2] = 6;
+            scheduler.a[1, 3] = 4;
+
+            // Fill transfer times
+            scheduler.t[0, 0] = 2;
+            scheduler.t[0, 1] = 3;
+            scheduler.t[0, 2] = 1;
+
+            scheduler.t[1, 0] = 2;
+            scheduler.t[1, 1] = 1;
+            scheduler.t[1, 2] = 2;
+
             #endregion
         }
     }
