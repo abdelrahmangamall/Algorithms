@@ -1,5 +1,6 @@
 ﻿using Algorithms.BruteForce;
 using Algorithms.DivideAndConquer;
+using Algorithms.Dynamic_Programming;
 
 namespace Algorithms
 {
@@ -47,17 +48,27 @@ namespace Algorithms
             #endregion
 
             #region QuickSort
-            QuickSort quickSort = new QuickSort();
-            int[] arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-            int[] arr = [5, 4, 3, 7, 1, 7, 7, 2, 0, 6];
-            Console.WriteLine("Original Arr: ");
-            quickSort.Print(arr);
+            //QuickSort quickSort = new QuickSort();
+            //int[] arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            //int[] arr = [5, 4, 3, 7, 1, 7, 7, 2, 0, 6];
+            //Console.WriteLine("Original Arr: ");
+            //quickSort.Print(arr);
 
-            Console.WriteLine("Sorted Arr: ");
-            quickSort.QuickSortAlgorithm(arr, 0, arr.Length - 1);
-            quickSort.Print(arr);
+            //Console.WriteLine("Sorted Arr: ");
+            //quickSort.QuickSortAlgorithm(arr, 0, arr.Length - 1);
+            //quickSort.Print(arr);
 
 
+            #endregion
+
+            #region Fib With DP
+            Fibonaccu fib = new Fibonaccu();
+            int[] arr = fib.FibWithButtomUp(5);
+            fib.Print(arr);
+
+
+            int res =fib.FibWithTopDown(5);
+            Console.WriteLine($"Fib {5} = {res}.");
             #endregion
         }
     }
