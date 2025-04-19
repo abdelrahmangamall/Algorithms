@@ -73,35 +73,13 @@ namespace Algorithms
 
             #region Assembly Line 
             var scheduler = new AssemblyLineScheduling();
+            int n = 4;
+            
+            int timeLine1 = scheduler.MinTime(n - 1, 0) + scheduler.x[0];
+            int timeLine2 = scheduler.MinTime(n - 1, 1) + scheduler.x[1];
 
-            // Fill entrance times
-            scheduler.e[0] = 2;
-            scheduler.e[1] = 4;
-
-            // Fill exit times
-            scheduler.x[0] = 3;
-            scheduler.x[1] = 2;
-
-            // Fill processing times
-            scheduler.a[0, 0] = 7;
-            scheduler.a[0, 1] = 9;
-            scheduler.a[0, 2] = 3;
-            scheduler.a[0, 3] = 4;
-
-            scheduler.a[1, 0] = 8;
-            scheduler.a[1, 1] = 5;
-            scheduler.a[1, 2] = 6;
-            scheduler.a[1, 3] = 4;
-
-            // Fill transfer times
-            scheduler.t[0, 0] = 2;
-            scheduler.t[0, 1] = 3;
-            scheduler.t[0, 2] = 1;
-
-            scheduler.t[1, 0] = 2;
-            scheduler.t[1, 1] = 1;
-            scheduler.t[1, 2] = 2;
-
+            int res = Math.Min(timeLine1, timeLine2);
+            Console.WriteLine("Minimum time to complete the assembly: " + res);
             #endregion
         }
     }

@@ -8,5 +8,6 @@ namespace Algorithms.Dynamic_Programming
 {
     class RodCutting
     {
+
     }
 }
