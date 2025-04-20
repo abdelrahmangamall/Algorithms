@@ -73,21 +73,37 @@ namespace Algorithms
             #endregion
 
             #region Assembly Line 
-            var scheduler = new AssemblyLineScheduling();
+            //var scheduler = new AssemblyLineScheduling();
 
-            int n = 4;
-            scheduler.dp = new int[n, 2];
+            //int n = 4;
+            //scheduler.dp = new int[n, 2];
 
-            for (int i = 0; i < n; i++)
-                for (int j = 0; j < 2; j++)
-                    scheduler.dp[i, j] = -1;
+            //for (int i = 0; i < n; i++)
+            //    for (int j = 0; j < 2; j++)
+            //        scheduler.dp[i, j] = -1;
 
-            int timeLine1 = scheduler.MinTime(n-1, 0) + scheduler.x[0];
-            int timeLine2 = scheduler.MinTime(n-1, 1) + scheduler.x[1];
+            //int timeLine1 = scheduler.MinTime(n-1, 0) + scheduler.x[0];
+            //int timeLine2 = scheduler.MinTime(n-1, 1) + scheduler.x[1];
 
-            int res = Math.Min(timeLine1, timeLine2);
-            Console.WriteLine("Minimum time to complete the assembly: " + res);
+            //int res = Math.Min(timeLine1, timeLine2);
+            //Console.WriteLine("Minimum time to complete the assembly: " + res);
             #endregion
+
+            #region Cut Rod 
+             RodCutting rod = new RodCutting();
+
+            #region with Recursion(top to Down)
+            //int max= rod.CR_Recursion(10);
+            // Console.WriteLine(max); 
+            #endregion
+
+
+            #region With iterative(Bottum to Up)
+            int res=  rod.CR_BottumUp(10);
+            Console.WriteLine(res);
+            #endregion
+            #endregion
+
         }
     }
 }
