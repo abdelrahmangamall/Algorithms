@@ -1,6 +1,7 @@
 ﻿using Algorithms.BruteForce;
 using Algorithms.DivideAndConquer;
 using Algorithms.Dynamic_Programming;
+using System.Runtime.Intrinsics.Arm;
 
 namespace Algorithms
 {
@@ -73,10 +74,16 @@ namespace Algorithms
 
             #region Assembly Line 
             var scheduler = new AssemblyLineScheduling();
+
             int n = 4;
-            
-            int timeLine1 = scheduler.MinTime(n - 1, 0) + scheduler.x[0];
-            int timeLine2 = scheduler.MinTime(n - 1, 1) + scheduler.x[1];
+            scheduler.dp = new int[n, 2];
+
+            for (int i = 0; i < n; i++)
+                for (int j = 0; j < 2; j++)
+                    scheduler.dp[i, j] = -1;
+
+            int timeLine1 = scheduler.MinTime(n-1, 0) + scheduler.x[0];
+            int timeLine2 = scheduler.MinTime(n-1, 1) + scheduler.x[1];
 
             int res = Math.Min(timeLine1, timeLine2);
             Console.WriteLine("Minimum time to complete the assembly: " + res);
