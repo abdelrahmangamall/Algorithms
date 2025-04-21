@@ -68,8 +68,8 @@ namespace Algorithms
             //fib.Print(arr);
 
 
-            //int res =fib.FibWithTopDown(5);
-            //Console.WriteLine($"Fib {5} = {res}.");
+            //int res = fib.FibWithTopDown(5);
+            //Console.WriteLine($"Fib {5} = {res}");
             #endregion
 
             #region Assembly Line 
@@ -90,7 +90,7 @@ namespace Algorithms
             #endregion
 
             #region Cut Rod 
-             RodCutting rod = new RodCutting();
+            RodCutting rod = new RodCutting();
 
             #region with Recursion(top to Down)
             //int max= rod.CR_Recursion(10);
@@ -99,7 +99,7 @@ namespace Algorithms
 
 
             #region With iterative(Bottum to Up)
-            //int res=  rod.CR_BottumUp(10);
+            //int res=  rod.CR_BuildingTable(10);
             //Console.WriteLine(res);
             #endregion
             #endregion
@@ -127,24 +127,24 @@ namespace Algorithms
             #endregion
 
             #region Knapsack
-            Knapsack knapsack = new Knapsack();
-            int n = knapsack.w.Length;
+            //Knapsack knapsack = new Knapsack();
+            //int n = knapsack.w.Length;
 
-            //int res = knapsack.kS_BruteForce(30,n);
-            // Console.WriteLine(res);
+            ////int res = knapsack.kS_BruteForce(30,n);
+            //// Console.WriteLine(res);
 
 
-            int W = 30;
+            //int W = 30;
 
-            knapsack.dp = new int[W + 1, n + 1];
+            //knapsack.dp = new int[W + 1, n + 1];
 
-            for (int i = 0; i <= W; i++)
-                for (int j = 0; j <= n; j++)
-                    knapsack.dp[i, j] = -1;
+            //for (int i = 0; i <= W; i++)
+            //    for (int j = 0; j <= n; j++)
+            //        knapsack.dp[i, j] = -1;
 
-            int resWithDP = knapsack.KS_DP_TopDown(W, n);
+            //int resWithDP = knapsack.KS_DP_TopDown(W, n);
 
-            Console.WriteLine($"resWithDP topDown: {resWithDP}");
+            //Console.WriteLine($"resWithDP topDown: {resWithDP}");
             #endregion
         }
     }

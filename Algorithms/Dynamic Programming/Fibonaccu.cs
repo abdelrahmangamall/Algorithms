@@ -10,34 +10,36 @@ namespace Algorithms.Dynamic_Programming
     class Fibonaccu : ParentForAllAlgorithms
     {
 
-        public int FibWithTopDown(int num)
+        public int FibWithTopDown(int n)
         {
-            int[] nums = new int[num+1];
+            int[] arr = new int[n + 1];
 
+            if (arr[n] != 0) return arr[n];
+            else if (n <= 1) return arr[n] = 1;
 
-            if (nums[num] != 0) return nums[num];
-
-            if (num<= 1) return nums[num] = 1;
-
-            nums[num] = FibWithTopDown(num - 1) + FibWithTopDown(num - 2);
-            return nums[num];
+            else
+            {
+                arr[n] = FibWithTopDown(n - 1) + FibWithTopDown(n - 2);
+                return arr[n];
+            }
         }
         
         
         
         
-        
-        public int[] FibWithButtomUp(int num)
+        public int[] FibWithButtomUp(int n)
         {
-            int[] nums = new int[num];
+            int[] arr = new int[n + 1];
 
-            for (int i = 0; i < num; i++)
+            for (int i = 0; i <= n; i++)
             {
-                if (i <= 1) nums[i] = 1;
-                else nums[i] = nums[i - 1] + nums[i - 2];
+                if (i <= 1)  arr[i] = 1;
+                else  arr[i] = arr[i - 1] + arr[i - 2];
             }
-            return nums;
+
+            return arr;
         }
     }
+    
 }
 

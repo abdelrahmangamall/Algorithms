@@ -13,6 +13,7 @@ namespace Algorithms.Dynamic_Programming
         public int CR_Recursion(int n) 
         {
 
+
             if (n == 0)
                 return 0;
            
@@ -24,7 +25,7 @@ namespace Algorithms.Dynamic_Programming
             return m;
         }
 
-        public int CR_Recursive(int n) 
+        public int CR_BuildingTable(int n) 
         {
             int[] R = new int[n+1];
 
