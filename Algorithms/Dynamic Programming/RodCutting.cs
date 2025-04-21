@@ -24,7 +24,7 @@ namespace Algorithms.Dynamic_Programming
             return m;
         }
 
-        public int CR_BottumUp(int n) 
+        public int CR_Recursive(int n) 
         {
             int[] R = new int[n+1];
 

@@ -99,11 +99,32 @@ namespace Algorithms
 
 
             #region With iterative(Bottum to Up)
-            int res=  rod.CR_BottumUp(10);
-            Console.WriteLine(res);
+            //int res=  rod.CR_BottumUp(10);
+            //Console.WriteLine(res);
             #endregion
             #endregion
 
+            #region Edit Distance
+            EditDistance distance = new EditDistance();
+
+            distance.s1 = "cat";     
+            distance.s2 = "hate";
+            #region Recurisve
+
+
+            //int len1 = distance.s1.Length;
+            //int len2 = distance.s2.Length;
+            //int minSteps = distance.ED_Recursive(len1, len2);
+            //Console.WriteLine(minSteps); 
+            #endregion
+            #region DP
+            string s1 = "cat";
+            string s2 = "hate";
+             int res = distance.ED_DP_ButtomUp(s1, s2);
+            Console.WriteLine($"Edit Distance between \"{s1}\" and \"{s2}\" is: {res}");
+
+            #endregion
+            #endregion
         }
     }
 }
