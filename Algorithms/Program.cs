@@ -114,16 +114,37 @@ namespace Algorithms
 
             //int len1 = distance.s1.Length;
             //int len2 = distance.s2.Length;
-            //int minSteps = distance.ED_Recursive(len1, len2);
+            //int minSteps = distance.ED_BF_Recursion(len1, len2);
             //Console.WriteLine(minSteps); 
             #endregion
             #region DP
-            string s1 = "cat";
-            string s2 = "hate";
-             int res = distance.ED_DP_ButtomUp(s1, s2);
-            Console.WriteLine($"Edit Distance between \"{s1}\" and \"{s2}\" is: {res}");
+            //string s1 = "cat";
+            //string s2 = "hate";
+            // int res = distance.ED_DP_ButtomUp(s1, s2);
+            //Console.WriteLine($"Edit Distance between \"{s1}\" and \"{s2}\" is: {res}");
 
             #endregion
+            #endregion
+
+            #region Knapsack
+            Knapsack knapsack = new Knapsack();
+            int n = knapsack.w.Length;
+
+            //int res = knapsack.kS_BruteForce(30,n);
+            // Console.WriteLine(res);
+
+
+            int W = 30;
+
+            knapsack.dp = new int[W + 1, n + 1];
+
+            for (int i = 0; i <= W; i++)
+                for (int j = 0; j <= n; j++)
+                    knapsack.dp[i, j] = -1;
+
+            int resWithDP = knapsack.KS_DP_TopDown(W, n);
+
+            Console.WriteLine($"resWithDP topDown: {resWithDP}");
             #endregion
         }
     }
