@@ -1,4 +1,4 @@
-﻿namespace Algorithms.BruteForce
+﻿namespace BruteForce
 {
     class BubbleSort
     {
