@@ -1,4 +1,4 @@
-﻿namespace BruteForce
+﻿namespace Algorithms.BruteForce
 {
     class SelectionSort
     {

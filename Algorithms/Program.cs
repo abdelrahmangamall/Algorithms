@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Intrinsics.Arm;
 
-namespace Algorithms
+namespace BruteForce
 {
     internal class Program
     {
