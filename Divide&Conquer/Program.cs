@@ -1,5 +1,6 @@
 ﻿using Algorithms.DivideAndConquer;
 using Divide_Conquer.Binary_Search;
+using Divide_Conquer.MergeSort;
 
 namespace Divide_Conquer
 {
@@ -15,6 +16,11 @@ namespace Divide_Conquer
             //Console.WriteLine("Sorted Arr: ");
             //mergeSort.Sort(arr, 0, arr.Length - 1);
             //mergeSort.Print(arr);
+            OddEvenChecking oddEven = new OddEvenChecking();
+            int[] arr ={ 2, 2, 3, 4, 5, 6 };
+           bool res = oddEven.EvOddChecking(arr,0,arr.Length-1);
+
+            Console.WriteLine($"Result is Odd {res}");
             #endregion
 
             #region QuickSort
@@ -39,10 +45,14 @@ namespace Divide_Conquer
             //Console.WriteLine($"the  target:{target} in element {result}");
 
 
-            UniModelSearch uni = new UniModelSearch();
-            int[] a = {1,2,3,4,5,9,8,7,6};
-            int res = uni.UniSearch(a, 0, a.Length);
-            Console.WriteLine(res);
+            //UniModelSearch uni = new UniModelSearch();
+            //int[] a = {1,2,3,4,5,9,8,7,6};
+            //int res = uni.UniSearch(a, 0, a.Length);
+            //Console.WriteLine(res);
+
+            //PoweringNumber number = new PoweringNumber();
+            //int res = number.PowrNumber(2, 5);
+            //Console.WriteLine(res);
             #endregion
 
         }

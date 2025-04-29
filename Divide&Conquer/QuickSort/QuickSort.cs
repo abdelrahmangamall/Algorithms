@@ -1,6 +1,6 @@
 ﻿using Algorithms.helpers;
 
-namespace Algorithms.DivideAndConquer
+namespace Divide_Conquer.QuickSort
 {
     class QuickSort : ParentForAllAlgorithms
     {

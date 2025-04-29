@@ -1,7 +1,7 @@
 ﻿using Algorithms.helpers;
 
 
-namespace Algorithms.DivideAndConquer
+namespace Divide_Conquer.MergeSort
 {
     class MergeSort : ParentForAllAlgorithms
     {
