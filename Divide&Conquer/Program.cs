@@ -1,4 +1,7 @@
-﻿namespace Divide_Conquer
+﻿using Algorithms.DivideAndConquer;
+using Divide_Conquer.Binary_Search;
+
+namespace Divide_Conquer
 {
     internal class Program
     {
@@ -10,7 +13,7 @@
             //Console.WriteLine("Original Arr: ");
             //mergeSort.Print(arr);
             //Console.WriteLine("Sorted Arr: ");
-            //mergeSort.Sort(arr, 0, arr.Length-1);
+            //mergeSort.Sort(arr, 0, arr.Length - 1);
             //mergeSort.Print(arr);
             #endregion
 
@@ -29,11 +32,17 @@
             #endregion
 
             #region BinarySearch
-            //BinarySearch binarySearch = new BinarySearch();
-            //int[] numbers = [2, 7, 8, 18, 20, 24, 29, 36, 40, 45, 51, 53, 60, 65, 69, 77, 81, 85, 91, 97];
-            //int target = 65;
-            //int result = binarySearch.FindElementWithBinarySearch(numbers, 65);
-            //Console.WriteLine(result);
+            //SearchInsertPosition search = new SearchInsertPosition();
+            //int[] numbers = [1, 3, 5, 6];
+            //int target =2;
+            //int result = search.SearchInsert(numbers, target);
+            //Console.WriteLine($"the  target:{target} in element {result}");
+
+
+            UniModelSearch uni = new UniModelSearch();
+            int[] a = {1,2,3,4,5,9,8,7,6};
+            int res = uni.UniSearch(a, 0, a.Length);
+            Console.WriteLine(res);
             #endregion
 
         }

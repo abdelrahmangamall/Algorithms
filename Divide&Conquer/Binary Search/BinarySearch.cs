@@ -9,18 +9,14 @@
             int length = arr.Length;
             int right = length - 1;
             int left = 0;
-            if (length == null) 
-            {
-                return -1;
-            }
-
+          
             while (length != 1)
             {
               int middle = left + (right - left) / 2;
 
                 if (arr[middle] == target)
                 {
-                    return arr[middle];
+                    return middle;
                 }
                 else if (arr[middle] < target)
                 {
@@ -30,7 +26,6 @@
                 else if (arr[middle] > target)
                 {
                     right = middle - 1;
-                    middle = (left + right) / 2;
                 }
             } 
             return -1;
